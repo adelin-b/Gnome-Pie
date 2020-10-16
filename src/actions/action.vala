@@ -28,7 +28,7 @@ namespace GnomePie {
 /// activates a pie's slice.
 /////////////////////////////////////////////////////////////////////////
 
-public abstract class Action : GLib.Object {
+protected abstract class Action : GLib.Object {
 
     /////////////////////////////////////////////////////////////////////
     /// The command which gets executed when user activates the Slice.
@@ -69,7 +69,7 @@ public abstract class Action : GLib.Object {
     /// C'tor, initializes all members.
     /////////////////////////////////////////////////////////////////////
 
-    public Action(string name, string icon, bool is_quickaction) {
+    protected Action(string name, string icon, bool is_quickaction) {
         GLib.Object(name : name, icon : icon, is_quickaction : is_quickaction);
     }
 
